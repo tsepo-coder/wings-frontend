@@ -1,0 +1,255 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #343a40;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+  width: 100px; /* Adjust logo size */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Scrolling Text */
+.scrolling-text {
+  animation: scroll 10s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: #495057;
+  color: #fff;
+}
+
+/* User Status */
+#userStatus {
+  display: flex;
+  align-items: center;
+}
+
+#loggedInUser {
+  margin-right: 15px;
+}
+
+/* Sections */
+section {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h2, h3 {
+  color: #333;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button[aria-label*="Delete"] {
+  background-color: #dc3545;
+}
+
+button[aria-label*="Delete"]:hover {
+  background-color: #c82333;
+}
+
+button[aria-label*="Sell"] {
+  background-color: #28a745;
+}
+
+button[aria-label*="Sell"]:hover {
+  background-color: #218838;
+}
+
+/* Success Message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #dee2e6;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #f8f9fa;
+}
+
+tr:nth-child(even) td {
+  background-color: #e9ecef;
+}
+
+/* Low Stock Alert */
+#lowStockAlert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+#lowStockAlert p {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    width: 90%;
+  }
+
+  form input[type="text"],
+  form input[type="password"],
+  form input[type="number"] {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
+}
